@@ -1,4 +1,4 @@
-# vuejs-tic-tac-toeg
+# vuejs-tic-tac-toe
 
 ## Project setup
 ```
