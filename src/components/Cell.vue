@@ -60,7 +60,6 @@
 	.cell {
 		height: 100px;
 		width: 100px;
-		margin: 2px;
 		border: 1px solid black;
 		line-height: 90px;
 		text-align: center;

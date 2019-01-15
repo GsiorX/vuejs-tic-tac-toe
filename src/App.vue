@@ -8,11 +8,10 @@
 		<br><br><br><br>
 
 		<div class="cellsArea" v-if="!reset">
-			<div v-for="(cell, row) in cellArray" :key="row">
+			<div v-for="(cell, row) in cellArray" :key="row" class="row">
 				<div v-for="(obj, column) in cell" :key="row+column" class="cells">
 					<cell-box :row="row" :column="column" :point="value" @clicked="clicked"></cell-box>
 				</div>
-				<br>
 			</div>
 		</div>
 	</div>
@@ -43,7 +42,7 @@
 		},
 
 		methods: {
-			// Odbieramy event od dziecka
+			// Obsługujemy event od dziecka
 			clicked: function(data) {
 				let result = true;
 				let point = '';
@@ -172,8 +171,8 @@
 			},
 
 			turn: function() {
-				if(this.turn === Math.pow(this.cells, 2)) {
-					alert('Brak zwyciezcy');
+				if (this.turn === Math.pow(this.cells, 2)) {
+					alert('Brak zwycięzcy');
 					this.buildCellArray();
 				}
 			}
@@ -181,7 +180,7 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	.centered {
 		text-align: center;
 		overflow: hidden;
@@ -194,5 +193,10 @@
 
 	.cells {
 		display: inline-block;
+		vertical-align: top;
+	}
+
+	.row {
+		text-align: center;
 	}
 </style>
